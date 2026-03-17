@@ -10,8 +10,8 @@ try:
     # Gizli Kasadan (Secrets) şifreyi çekiyoruz
     api_key = st.secrets["api_sifresi"]
     genai.configure(api_key=api_key)
-    # EN GARANTİ MODEL İSMİ BUDUR:
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    # GARDAŞ, 404 HATASINI ÇÖZEN ASIL MODEL İSMİ BUDUR:
+    model = genai.GenerativeModel('models/gemini-1.5-flash')
     zeka_aktif = True
 except Exception as e:
     zeka_aktif = False
@@ -56,7 +56,7 @@ with tab1:
         with st.chat_message("assistant"):
             if zeka_aktif:
                 try:
-                    # BURASI KİLİT NOKTA:
+                    # CEVAP ÜRETME
                     response = model.generate_content(prompt)
                     cevap = response.text
                     st.write(cevap)
@@ -70,10 +70,13 @@ with tab2:
     st.header("🎯 7. Sınıf Çalışma Düzenleyici")
     if st.button("Bana 2 Program Hazırla"):
         if zeka_aktif:
-            res = model.generate_content("Ben 7. sınıf öğrencisiyim, bana 2 farklı ders çalışma programı yap.")
-            st.write(res.text)
+            try:
+                res = model.generate_content("Ben 7. sınıf öğrencisiyim, bana 2 farklı çalışma programı yap.")
+                st.write(res.text)
+            except:
+                st.error("Program üretilirken hata oluştu.")
 
 with tab3:
     st.header("🛠️ İcat Atölyesi")
     if st.button("Proje Öner"):
-        st.write("ESP32 ve Sensörlerle akıllı saksı yapabilirsin gardaş!")
+        st.write("Gardaş, elindeki ESP32 ile akıllı ev sistemi kurabilirsin!")

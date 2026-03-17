@@ -12,7 +12,7 @@ try:
     api_key = st.secrets["api_sifresi"]
     genai.configure(api_key=api_key)
     # 404 hatası vermeyen en sağlam model:
-    model = genai.GenerativeModel('model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-1.5-flash')
     zeka_aktif = True
 except Exception as e:
     zeka_aktif = False

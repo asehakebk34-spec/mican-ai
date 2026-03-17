@@ -292,6 +292,42 @@ with tab4:
     # --- ÖZEL TEKNOLOJİ KÖŞESİ ---
     st.markdown("<h4 style='color:#fc00ff;'>✈️ Havacılık ve Gelecek Teknolojileri</h4>", unsafe_allow_html=True)
     st.write("Uçak teknolojileri veya geleceğin mühendisliği hakkında ilham al.")
+    # ==============================================================================
+# ☎️ BÖLÜM 12: MÜŞTERİ TEMSİLCİSİ MERKEZİ (PART 5)
+# ==============================================================================
+with tab5:
+    st.markdown("<h3 style='color:#00f2fe;'>☎️ Mican Destek Merkezi</h3>", unsafe_allow_html=True)
+    st.write("Sistemle ilgili bir sorun mu var gardaş? Teknik ekibe buradan ulaşabilirsin.")
+
+    # Senin istediğin o efsane kırmızı uyarı kutusu:
+    st.markdown("""
+        <div style='background: rgba(255,0,0,0.15); padding: 30px; border-radius: 20px; border: 2px solid #ff4b4b; text-align: center; box-shadow: 0 0 20px rgba(255,75,75,0.2);'>
+            <h4 style='color: white; margin-bottom: 15px;'>⚠️ KRİTİK BAĞLANTI UYARISI</h4>
+            <p style='font-size: 22px; color: #ff4b4b; font-weight: bold; text-shadow: 0 0 10px rgba(255,75,75,0.5);'>
+                Henüz herhangi bir numara bağlanmadı.
+            </p>
+            <p style='color: #bbbbbb; margin-top: 10px;'>
+                Mican AI teknik altyapı ekipleri şu an bölgedeki yüksek yoğunluk nedeniyle hatlara müdahale edemiyor. 
+                Lütfen daha sonra tekrar deneyin veya yapay zekaya danışın gardaşım.
+            </p>
+        </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("---")
+    st.info("💡 Mican Notu: Teknik ekip gelene kadar her türlü sorununu Sohbet sekmesinden bana sorabilirsin, ben çözerim!")
+
+# ==============================================================================
+# 🏁 BÖLÜM 13: SİSTEM ALT BİLGİSİ VE KAPANIŞ (FOOTER)
+# ==============================================================================
+st.markdown("<br><br><br>", unsafe_allow_html=True)
+st.markdown(f"""
+    <div style='text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;'>
+        <p style='color: rgba(255,255,255,0.3); font-size: 13px; letter-spacing: 1px;'>
+            MİCAN AI ULTRA SÜRÜM v4.0 | © {datetime.now().year} BÜTÜN HAKLARI SAKLIDIR
+        </p>
+        <p style='color: #00f2fe; font-size: 11px;'>Sistem Durumu: 🟢 Aktif ve Güvenli</p>
+    </div>
+""", unsafe_allow_html=True)
     
     if st.button("🌟 GÜNÜN TEKNOLOJİ BİLGİSİNİ VER"):
         if st.session_state.active_model:
